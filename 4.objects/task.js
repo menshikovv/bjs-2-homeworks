@@ -10,7 +10,7 @@ function Student(name, gender, age) {
   };
   
   Student.prototype.addMarks = function (...marksToAdd) {
-    if (!this.hasOwnProperty('marks')) {
+    if (this.excluded) {
       console.log("Студент отчислен и не имеет возможности добавлять оценки.");
       return;
     }
