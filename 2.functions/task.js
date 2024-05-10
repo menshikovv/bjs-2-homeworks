@@ -27,13 +27,11 @@ console.log(getArrayParams(1, 2, 3, -100, 10));
 console.log(getArrayParams(5));
 
 
-// Насадка суммирования элементов
 function summElementsWorker(...arr) {
   if (arr.length === 0) return 0;
   return arr.reduce((acc, curr) => acc + curr, 0);
 }
 
-// Насадка вычисления разницы максимального и минимального элементов
 function differenceMaxMinWorker(...arr) {
   if (arr.length === 0) return 0;
   const min = Math.min(...arr);
@@ -41,7 +39,6 @@ function differenceMaxMinWorker(...arr) {
   return max - min;
 }
 
-// Насадка вычисления разницы сумм чётных и нечётных элементов
 function differenceEvenOddWorker(...arr) {
   if (arr.length === 0) return 0;
   let sumEvenElement = 0;
